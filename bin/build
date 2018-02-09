@@ -1,5 +1,6 @@
 #!/bin/bash -exu
 
+# brew install maven # for macosx
 mvn package
 # move the artifact into pkg so we do not have to send the whole target file
 # to the docker build context. We will dockerignore target.
