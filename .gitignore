@@ -1,4 +1,7 @@
 pkg
 target
+.ufo/current
++.ufo/data
+.ufo/log
 .ufo/output
-.ufo/data
+*.class
