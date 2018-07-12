@@ -23,6 +23,15 @@ Here's an example of some things to check after running the build script:
     tomcat              8.5                 a92c139758db        2 weeks ago         558MB
     $
 
+## Source Code
+
+The app is a small demo of a java servlet app.  Here's the source code to url mapping:
+
+Source | Url
+--- | ---
+src/main/java/Hello.java | localhost:8080/demo/Hello
+src/main/webapp/index.jsp | localhost:8080/demo/index.jsp
+
 ## Run
 
 Here are the summarized commands to run and test that Tomcat is serving the war file:
