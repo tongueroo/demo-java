@@ -25,25 +25,32 @@ Here's an example of some things to check after running the build script:
 
 ## Run
 
-To run and test that Tomcat is serving the the war file:
+Here are the summarized commands to run and test that Tomcat is serving the war file:
 
     docker run --rm -p 8080:8080 -d demo-java
     docker exec -ti $(docker ps -ql) bash
     curl localhost:8080/demo/Hello
+    curl localhost:8080/demo/index.jsp
     exit
     docker stop $(docker ps -ql)
 
 Then you can hit the the [HOSTNAME]:8080/demo/Hello and to verify that Tomcat is servering the demo.war file.  You should see an html page that says "Hello World".  The output should look similar:
 
     $ docker run --rm -p 8080:8080 -d demo-java
-    5ccc23ec07f2057ee530b9ad51714d4f07054d5c101ae407715aca33e5fffd69
+    2ba7323481fa5c4068b90f2edf38555d9551303e9c2e4c27137ab0545688555b
     $ docker exec -ti $(docker ps -ql) bash
-    root@5ccc23ec07f2:/usr/local/tomcat# curl localhost:8080/demo/Hello
-    <h1>Hello World</h1>
-    root@5ccc23ec07f2:/usr/local/tomcat# exit
+    root@2ba7323481fa:/usr/local/tomcat# curl localhost:8080/demo/Hello
+    <h1>Hello World Hello.java</h1>
+    root@2ba7323481fa:/usr/local/tomcat# curl localhost:8080/demo/index.jsp
+    <html>
+    <body>
+    <h2>Hello World index.jsp!</h2>
+    </body>
+    </html>
+    root@2ba7323481fa:/usr/local/tomcat# exit
     exit
     $ docker stop $(docker ps -ql)
-    5ccc23ec07f2
+    2ba7323481fa
     $ docker ps -a
     CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
     $
