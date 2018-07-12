@@ -1,4 +1,4 @@
 pkg
 target
-ufo/output
-ufo/data
+.ufo/output
+.ufo/data
