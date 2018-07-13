@@ -1,0 +1,28 @@
+# More info: http://ufoships.com/docs/ufo-settings/
+# The base config is treated special. It gets included the other environments automatically.
+# Yaml also directly supports merging with & and <<* syntax but doing it automatically
+# for a cleaner syntax.
+base:
+  image: tongueroo/demo-java
+  # clean_keep: 30
+  # ecr_keep: 30
+  # network_profile: default # .ufo/settings/network/default.yml file
+  # cfn_profile: default # .ufo/settings/cfn/default.yml file
+  # If you want to have prettier name set for the ECS service name
+  # There are some cavaets with this. Updating properties on resources that require
+  # replacment might not work. For example, adding and removing a load balancer.
+  # In these cases, you must delete the entire ecs service and recreate it.
+
+development:
+  # cluster: development
+  # When you have AWS_PROFILE set to one of these values, ufo will switch to the desired
+  # environment. This prevents you from switching AWS_PROFILE, forgetting to
+  # also switch UFO_ENV, and accidentally deploying to production vs development.
+  # aws_profiles:
+  #   - dev_profile1
+  #   - dev_profile2
+
+production:
+  # cluster: production
+  # aws_profiles:
+  #   - prod_profile
