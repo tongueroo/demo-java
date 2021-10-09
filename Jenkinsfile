@@ -10,14 +10,14 @@ pipeline {
             steps {
                 sh 'mvn clean package' 
             }
-        }
+  
                     post {
                 success {
                     // we only worry about archiving the jar file if the build steps are successful
                     archiveArtifacts(artifacts: '**/target/*.jar', allowEmptyArchive: true)
                 }
             }
-        
+        }      
         stage('test'){
             steps{
                 sh 'mvn clean test'
