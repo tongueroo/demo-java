@@ -14,7 +14,7 @@ pipeline {
                     post {
                 success {
                     // we only worry about archiving the jar file if the build steps are successful
-                    archiveArtifacts(artifacts: '**/target/*.jar', allowEmptyArchive: true)
+                    archiveArtifacts(artifacts: '**/target/*.war', allowEmptyArchive: true)
                 }
             }
         }      
