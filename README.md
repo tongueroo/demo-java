@@ -1,5 +1,8 @@
 # Demo Java Web App
 
+
+# Test branch restriction process on master branch.
+
 Simple java project demos how to build a war file to be deployed on a Tomcat server.
 
 ## Build
