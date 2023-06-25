@@ -25,6 +25,12 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://172.16.16.102:8081/repository/maven-releases</url>
+   </repository>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
