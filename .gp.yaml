@@ -1,0 +1,15 @@
+name: demo
+desc: demo
+runbooks:
+- name: demo
+  desc: demo
+  selectors:
+  - type: jsonPathSelector
+    selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=Secret'
+  - type: jsonPathSelector
+    selector: '{.metadata.name}=bootstrap-token-abcdef'
+  - type: jsonPathSelector
+    selector: '{.metadata.namespace}=kube-system'
+  doc: demo/demo.md
